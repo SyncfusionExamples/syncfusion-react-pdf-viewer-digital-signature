@@ -22,3 +22,67 @@ npm install
 npm run dev
 ```
 
+---
+
+## Building APK for Android
+
+Follow these steps to convert the React application into an APK file for Android deployment.
+
+### 1. Build the React Application
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `dist` directory.
+
+### 2. Install Capacitor
+
+```bash
+npm install @capacitor/core @capacitor/cli
+npx cap init
+```
+
+During the `cap init` command, you'll be prompted to enter your app name and App ID (e.g., `com.syncfusion.pdfviewer`).
+
+### 3. Configure Capacitor
+
+Ensure configurations were proper in `capacitor.config.ts` file in your project root:
+
+```typescript
+const config = {
+  appId: 'com.syncfusion.pdfviewer',
+  appName: 'PdfViewer',
+  webDir: 'dist'
+};
+export default config;
+```
+
+**Note:** Make sure the `webDir` points to your build output directory (typically `dist` for Vite projects).
+
+### 4. Add Android Platform
+
+```bash
+npm install @capacitor/android
+npx cap add android
+npx cap copy
+```
+
+### 5. Open in Android Studio
+
+```bash
+npx cap open android
+```
+
+This opens the Android project in Android Studio where you can build the APK.
+
+### 6. Generate Signed APK
+
+In Android Studio:
+
+1. Navigate to **Build** menu
+2. Select **Generate Signed Bundle / APK**
+3. Choose **APK** 
+4. Click **Finish** to generate the APK
+
+
