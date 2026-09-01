@@ -1,0 +1,221 @@
+/* Visible Digital Signature sample styles */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.col-lg-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+.col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+    .col-lg-8,
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* PDF Viewer container */
+.e-pv-visible-sign-pdfviewer-tab-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    overflow: hidden;
+}
+
+.e-pv-visible-sign-toolbar {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 4px 8px;
+}
+
+.e-pv-visible-sign-message {
+    padding: 8px 8px 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.e-pv-visible-sign-pdfviewer-container {
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative;
+}
+
+/* Right-hand tab panel */
+.e-pv-visible-sign-tab-panel {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+    height: 610px;
+    overflow: auto;
+}
+
+.e-pv-visible-sign-header-title {
+    margin-bottom: 8px;
+}
+
+.e-pv-visible-sign-group-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.e-pv-visible-sign-tab-header {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.e-pv-visible-sign-tab-header-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #555;
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.e-pv-visible-sign-tab-header-item.active {
+    color: #0078d4;
+    border-bottom-color: #0078d4;
+    font-weight: 600;
+}
+
+.e-pv-visible-sign-tab-header-item-text {
+    pointer-events: none;
+}
+
+.e-pv-visible-sign-tab {
+    display: block;
+}
+
+.e-pv-visible-sign-tab-content {
+    display: block;
+}
+
+.e-pv-visible-sign-tab-content hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 12px 0;
+}
+
+.e-pv-visible-sign-group {
+    margin-bottom: 4px;
+}
+
+.e-pv-visible-sign-inner-table,
+.e-pv-visible-sign-position-table,
+.e-pv-visible-sign-size-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.e-pv-visible-sign-inner-table td,
+.e-pv-visible-sign-position-table td,
+.e-pv-visible-sign-size-table td {
+    padding: 4px 6px;
+    vertical-align: middle;
+}
+
+/* Signature image list */
+.e-pv-visible-sign-signature-image-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.e-pv-visible-sign-signature-image-header {
+    display: flex;
+    align-items: center;
+}
+
+.e-pv-visible-sign-uploaded-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.e-pv-visible-sign-image-wrapper {
+    position: relative;
+    width: 90px;
+    height: 60px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.e-pv-visible-sign-image-wrapper.selected {
+    border-color: #0078d4;
+}
+
+.e-pv-visible-sign-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.e-pv-visible-sign-image-delete {
+    position: absolute !important;
+    top: 2px;
+    right: 2px;
+    z-index: 2;
+}
+
+/* Dropdown labels and inputs */
+.e-pv-visible-sign-dropdown-label {
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.e-pv-visible-sign-text-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.e-pv-visible-sign-input-item {
+    flex: 1;
+}
+
+/* Footer */
+.e-pv-visible-sign-tab-content-footer {
+    margin-top: 12px;
+    text-align: right;
+}
