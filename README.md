@@ -15,7 +15,7 @@ A React 19 + Vite sample showcasing Syncfusion PDF Viewer features, including di
 - Flatten PDF, annotations, or form fields and reload the flattened result directly in the viewer.
 - No backend service is required. All signing and validation operations run locally in the browser.
 
-## Run the standalone sample
+## Command to run the standalone sample
 
 ```bash
 npm install
