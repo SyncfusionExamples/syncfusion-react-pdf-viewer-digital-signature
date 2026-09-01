@@ -1,6 +1,11 @@
 # Syncfusion React PDF Viewer - Digital Signature
 
-A React 19 + Vite sample showcasing Syncfusion PDF Viewer features, including digital signatures, signature validation, form-field replication, page organization, PDF merging, and document flattening.
+A React 19 + Vite sample showcasing Syncfusion PDF Viewer features, including digital signatures, signature validation, form-field replication, page organization, PDF merging, and document flattening. To run the application as a standalone app, use the following commands:
+
+```bash
+npm install
+npm run dev
+```
 
 ## Features
 
@@ -14,13 +19,6 @@ A React 19 + Vite sample showcasing Syncfusion PDF Viewer features, including di
 - Organize Pages allows page insertion, deletion, rotation, reordering, and PDF merging.
 - Flatten PDF, annotations, or form fields and reload the flattened result directly in the viewer.
 - No backend service is required. All signing and validation operations run locally in the browser.
-
-## Command to run the standalone sample
-
-```bash
-npm install
-npm run dev
-```
 
 ---
 
