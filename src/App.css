@@ -1,0 +1,152 @@
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.e-pv-visible-sign-tab-panel {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .e-pv-visible-sign-tab-panel {
+        width: 100%;
+        margin-top: 10px;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .content {
+        overflow-y: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .e-pv-visible-sign-inner-table,
+    .e-pv-visible-sign-position-table,
+    .e-pv-visible-sign-size-table {
+        width: 100%;
+    }
+
+    .e-pv-visible-sign-inner-table tr,
+    .e-pv-visible-sign-position-table tr,
+    .e-pv-visible-sign-size-table tr {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .e-pv-visible-sign-inner-table td,
+    .e-pv-visible-sign-position-table td,
+    .e-pv-visible-sign-size-table td {
+        width: 100%;
+    }
+}
+
+.e-pv-visible-sign-uploaded-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.e-pv-visible-sign-image-wrapper {
+    width: 80px;
+}
+
+.e-pv-visible-sign-image {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .e-dropdownlist,
+    .e-input-group,
+    .e-control-wrapper {
+        width: 100% !important;
+    }
+
+    #root {
+
+    overflow: visible;
+}
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .content {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+.control-section {
+    min-height: 400px;
+}
+
+.e-pv-visible-sign-pdfviewer-tab-container {
+    height: 100%;
+}
+
+.e-pv-visible-sign-pdfviewer-container {
+    height: 350px;
+}
+
+@media (min-width: 769px) {
+    .control-section {
+        height: calc(100vh - 20px);
+    }
+
+    .e-pv-visible-sign-pdfviewer-container {
+        height: calc(100% - 50px);
+    }
+}
+
+.pdfviewer-component {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-container {
+height: calc(100vh - 16px);
+}

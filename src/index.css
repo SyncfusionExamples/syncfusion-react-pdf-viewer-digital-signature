@@ -1,0 +1,5 @@
+/* Syncfusion PDF Viewer */
+@import '@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+@import '@syncfusion/ej2-tailwind3-theme/styles/message/index.css';
+/* App-level styles */
+@import './App.css';
