@@ -45,15 +45,14 @@ During the `cap init` command, you'll be prompted to enter your app name and App
 
 ### 3. Configure Capacitor
 
-Ensure configurations were proper in `capacitor.config.ts` file in your project root:
+Ensure configurations were proper in `capacitor.config.json` file in your project root:
 
-```typescript
-const config = {
-  appId: 'com.syncfusion.pdfviewer',
-  appName: 'PdfViewer',
-  webDir: 'dist'
-};
-export default config;
+```json
+{
+  "appId": "com.syncfusionej2pdfviewer.app",
+  "appName": "syncfusion-ej2-pdfviewer",
+  "webDir": "dist"
+}
 ```
 
 **Note:** Make sure the `webDir` points to your build output directory (typically `dist` for Vite projects).
@@ -83,4 +82,91 @@ In Android Studio:
 3. Choose **APK** 
 4. Click **Finish** to generate the APK
 
+---
+
+## Building IPA for iOS
+
+Follow these steps to convert the React application into an IPA file for iOS deployment.
+
+### 1. Build the React Application
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `dist` directory.
+
+### 2. Install Capacitor (if not already installed)
+
+```bash
+npm install @capacitor/core @capacitor/cli
+npx cap init
+```
+
+During the `cap init` command, you'll be prompted to enter your app name and App ID (e.g., `com.syncfusion.pdfviewer`).
+
+### 3. Configure Capacitor
+
+Ensure configurations are properly set in `capacitor.config.json` file in your project root:
+
+```json
+{
+  "appId": "com.syncfusionej2pdfviewer.app",
+  "appName": "syncfusion-ej2-pdfviewer",
+  "webDir": "dist"
+}
+```
+
+**Note:** Make sure the `webDir` points to your build output directory (typically `dist` for Vite projects).
+
+### 4. Add iOS Platform
+
+```bash
+npm install @capacitor/ios
+npx cap add ios
+npx cap copy
+```
+
+### 5. Open in Xcode
+
+```bash
+npx cap open ios
+```
+
+This opens the iOS project in Xcode where you can build the IPA.
+
+### 6. Configure Signing & Capabilities in Xcode
+
+In Xcode:
+
+1. Select your project in the Project Navigator (left sidebar)
+2. Select the target application
+3. Navigate to the **Signing & Capabilities** tab
+4. Configure your Apple Developer Team and Bundle Identifier
+5. Ensure the correct provisioning profile is selected
+
+### 7. Generate Archive
+
+In Xcode:
+
+1. Select **Product** menu
+2. Select **Archive**
+3. Wait for the build and archiving process to complete
+
+### 8. Export IPA
+
+After archiving:
+
+1. The **Organizer** window will open automatically showing the archive
+2. Select your archive and click **Distribute App**
+3. Choose **App Store Connect** or **Ad Hoc** distribution method
+4. Follow the prompts to sign and export the IPA file
+5. The IPA will be saved to your specified location
+
+### Prerequisites for iOS Development
+
+- **macOS**: Required for iOS development
+- **Xcode**: Download from the Mac App Store
+- **Apple Developer Account**: Required for code signing and distribution
+- **Cocoapods**: Usually installed automatically with Xcode, but can be installed via: `sudo gem install cocoapods`
 
